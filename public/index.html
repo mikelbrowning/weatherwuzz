@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#f9b05c">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+      
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900|Droid+Sans+Mono|Pacifico" rel="stylesheet">
+    <title>WeatherWuzz</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8
+            });
+          }
+          $(document).ready(function () { console.log(map);initMap()})
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCETBxYmEnYtEFH13XMYIrvSNiam-nyQkI" async defer></script>
+  </body>
+
+</html>
